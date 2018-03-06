@@ -1,0 +1,72 @@
+---
+title: "Avalanche Fatalities in the Wasatch Mountians, Utah, USA"
+author: "Peter EerNisse, Salt Lake City, UT"
+date: "March 5, 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE,echo=FALSE,message=F,error=F}
+knitr::opts_chunk$set()
+setwd("C:/R_Projects/Avalanche")
+
+library(tidyverse)
+library(xml2)
+library(lubridate)
+library(XML)
+library(rvest)
+
+
+```
+
+# Introduction
+
+# Data Sources
+
+## Avalanche Fatality Data
+https://utahavalanchecenter.org/avalanches/fatalities
+
+```{r get avalanche data, echo = T}
+
+
+
+#Get the sample data from 
+#https://utahavalanchecenter.org/avalanches/fatalities
+#https://utahavalanchecenter.org/avalanches/reco-download
+
+#Get avalanche data
+if(!file.exists("./data")){dir.create("./data")}
+fileURL<-"https://utahavalanchecenter.org/batch?op=start&id=10782"
+download.file(fileURL,destfile = "./data/avalanches.csv",method="curl")
+avs<-read.csv("./data/avalanches.csv",stringsAsFactors = F) %>% 
+        as.data.frame() %>% 
+        filter(Date != '',Region == 'Salt Lake')
+newdates<-as.Date(avs$Date,format = "%m/%d/%Y")
+avs$Date<-as.POSIXct(newdates)
+avs$YEAR<-year(avs$Date)
+avs$MONTH<-month(avs$Date,label=T)
+
+
+#Get avalanche fatality data
+URL<-"https://utahavalanchecenter.org/avalanches/fatalities"
+page<-read_html(URL)
+
+#vignette("selectorgadget")
+
+links<-(html_attr(html_nodes(page,"a"),"href"))
+links<-links[c(5:500)]
+
+#Complete the URL on the links
+links<-paste0("http://www.cnn.com",links)
+
+
+
+
+```
+
+
+
+# Method
+
+# Results
+
+# Conclusions
