@@ -1,21 +1,13 @@
 ---
-title: "Avalanche Fatalities in the Wasatch Mountians, Utah, USA"
+title: "Using GIT for Version Control and Collaboration"
 author: "Peter EerNisse, Salt Lake City, UT"
-date: "March 5, 2018"
+date: "March 8, 2018"
 output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE,echo=FALSE,message=F,error=F}
 knitr::opts_chunk$set()
 setwd("C:/R_Projects/Avalanche")
-
-library(tidyverse)
-library(xml2)
-library(lubridate)
-library(XML)
-library(rvest)
-
-
 ```
 
 # Introduction
@@ -63,9 +55,9 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 * Open GIT Bash
 * Enter the following
 
-1. git config --global user.name "Your Name Here" 
-2. git config --global user.email "your_email@example.com"
-3. git config --list
+1. git config - - global user.name "Your Name Here" 
+2. git config - - global user.email "your_email@example.com"
+3. git config - - list
 
 # Git Bash Command Line
 
@@ -103,50 +95,29 @@ There is a GUI that loads with GIT for managing files without hte command line.
 * This is enabled when you initiate your work as an R Project (.RPrj)
 
 ## Create a GIT Repo in a new project folder
+* This is the method to use to set up a GIT repo in your local working directory. Others can then fork from this and it serves as the master branch.
 
 ## Clone from an Existing Repo
+* This method sets up an R Project based on an existing repo such as on GitHub or VSTS.
 
 
 # Github
 
 * https://github.com/peernisse
 
+* Very popular with developers
+* R packages are often available in beta from people's GitHub
+
+
+
 # VisualStudio Team Services
+* This is available to Stantec users as part of our Office 365 account
+* Seems like a mashup of GIT, MS Project, MS SharePoint
 
 # GIT on our Servers
+* To keep in Stantec policy we can use the benefits of GIT within the confines of our own network.
 
-
-
-# Data Sources
-
-## Avalanche Fatality Data
-https://utahavalanchecenter.org/avalanches/fatalities
-
-```{r get avalanche data, echo = T}
-
-
-
-#Get the sample data from 
-#https://utahavalanchecenter.org/avalanches/fatalities
-#https://utahavalanchecenter.org/avalanches/reco-download
-
-#Get avalanche data
-if(!file.exists("./data")){dir.create("./data")}
-fileURL<-"https://utahavalanchecenter.org/batch?op=start&id=10782"
-download.file(fileURL,destfile = "./data/avalanches.csv",method="curl")
-avs<-read.csv("./data/avalanches.csv",stringsAsFactors = F) %>% 
-        as.data.frame() %>% 
-        filter(Date != '',Region == 'Salt Lake')
-newdates<-as.Date(avs$Date,format = "%m/%d/%Y")
-avs$Date<-as.POSIXct(newdates)
-avs$YEAR<-year(avs$Date)
-avs$MONTH<-month(avs$Date,label=T)
-
-
-# #Get avalanche fatality data
-# URL<-"https://utahavalanchecenter.org/avalanches/fatalities"
-# page<-read_html(URL)
-
+* This means setting up an R Project in a server directory and treating that like the master branch.
 
 
 
