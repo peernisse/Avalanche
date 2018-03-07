@@ -1,12 +1,3 @@
----
-title: "Avalanche Fatalities in the Wasatch Mountians, Utah, USA"
-author: "Peter EerNisse, Salt Lake City, UT"
-date: "March 5, 2018"
-output: slidy_presentation
----
-
-```{r setup, include=FALSE,echo=FALSE,message=F,error=F}
-knitr::opts_chunk$set()
 setwd("C:/R_Projects/Avalanche")
 
 library(tidyverse)
@@ -14,33 +5,6 @@ library(xml2)
 library(lubridate)
 library(XML)
 library(rvest)
-
-
-```
-
-# Introduction
-
-* I am no expert in GIT.
-
-# What is GIT
-
-# GIT and RStudio
-
-https://support.rstudio.com/hc/en-us/articles/200532077?version=1.0.136&mode=desktop
-
-# VisualStudio Team Services
-
-# GIT on our Servers
-
-
-
-# Data Sources
-
-## Avalanche Fatality Data
-https://utahavalanchecenter.org/avalanches/fatalities
-
-```{r get avalanche data, echo = T}
-
 
 
 #Get the sample data from 
@@ -63,10 +27,3 @@ avs$MONTH<-month(avs$Date,label=T)
 # #Get avalanche fatality data
 # URL<-"https://utahavalanchecenter.org/avalanches/fatalities"
 # page<-read_html(URL)
-
-
-
-
-```
-
-
