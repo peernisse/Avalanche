@@ -20,6 +20,20 @@ library(rvest)
 
 # Introduction
 
+* I am no expert in GIT.
+
+# What is GIT
+
+# GIT and RStudio
+
+https://support.rstudio.com/hc/en-us/articles/200532077?version=1.0.136&mode=desktop
+
+# VisualStudio Team Services
+
+# GIT on our Servers
+
+
+
 # Data Sources
 
 ## Avalanche Fatality Data
@@ -46,17 +60,9 @@ avs$YEAR<-year(avs$Date)
 avs$MONTH<-month(avs$Date,label=T)
 
 
-#Get avalanche fatality data
-URL<-"https://utahavalanchecenter.org/avalanches/fatalities"
-page<-read_html(URL)
-
-#vignette("selectorgadget")
-
-links<-(html_attr(html_nodes(page,"a"),"href"))
-links<-links[c(5:500)]
-
-#Complete the URL on the links
-links<-paste0("http://www.cnn.com",links)
+# #Get avalanche fatality data
+# URL<-"https://utahavalanchecenter.org/avalanches/fatalities"
+# page<-read_html(URL)
 
 
 
@@ -64,9 +70,3 @@ links<-paste0("http://www.cnn.com",links)
 ```
 
 
-
-# Method
-
-# Results
-
-# Conclusions
