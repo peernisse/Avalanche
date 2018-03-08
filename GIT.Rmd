@@ -16,7 +16,7 @@ setwd("C:/R_Projects/Avalanche")
 
 * This is the first time that the US FDA has approved a direct-to-consumer genetics test for cancer risk.
 
-* As a result, the FDA is now allowing 23andMe to market tests that assess genetic risks for breast, ovarian and prostate cancer as well at least 10 additional diseases or conditions. 
+* As a result, the FDA is now allowing 23andMe to market tests that assess genetic risks for breast, ovarian and prostate cancer as well as at least 10 additional diseases or conditions. 
 
 ![](lead_960.png)
 
@@ -123,12 +123,6 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 
 ##GIT commands
 
-|               |               
-| ------------- | ------------- |
-| git add   - .adds all new files    | git commit - commits changes |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
 * git add     - .adds all new files
 * git commit    - commits changes
 * git push      - push changes to your remote branch
@@ -138,6 +132,7 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 * git fetch - 
 * git merge childbranchname
 
+![](Capture1.JPG)
 
 # GIT GUI
 
@@ -145,10 +140,11 @@ There is a GUI that loads with GIT for managing files without the command line.
 
 ![](gitGUI2.JPG)
 
+This has so far been more confusing than useful.
 
 # GIT and RStudio
 * RStudio interfaces with GIT!
-* This is enabled when you initiate your work as an R Project (.RPrj)
+* This is enabled when you initiate your work as an R Project (.RProj)
 
 ## Create a GIT Repo in a new project folder
 * This is the method to use to set up a GIT repo in your local working directory. Others can then fork from this and it serves as the master branch.
