@@ -1,6 +1,6 @@
 ---
 title: "Using GIT for Version Control and Collaboration"
-author: "Peter EerNisse, Salt Lake City, UT"
+author: "Stantec"
 date: "March 8, 2018"
 output: slidy_presentation
 ---
@@ -33,6 +33,11 @@ http://git-scm.com/book/en/Getting-Started-About-Version-Control
 * Especially important when collaborating with others 
 
 http://en.wikipedia.org/wiki/Revision_control
+
+# Version Control
+
+![](versionCtl.gif)
+
 
 # What is GIT
 
@@ -81,6 +86,8 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 * git checkout -b branchname - Create a new branch
 * git branch - see what branch you are on
 * git pull - pull data from a branch to your local repo
+* git fetch - 
+* git merge childbranchname
 
 
 # GIT GUI
@@ -96,6 +103,8 @@ There is a GUI that loads with GIT for managing files without hte command line.
 
 ## Create a GIT Repo in a new project folder
 * This is the method to use to set up a GIT repo in your local working directory. Others can then fork from this and it serves as the master branch.
+* Branches cannot be made from RStudio
+* Use Git Bash and type "git checkout -b" new-branch name
 
 ## Clone from an Existing Repo
 * This method sets up an R Project based on an existing repo such as on GitHub or VSTS.
@@ -107,12 +116,13 @@ There is a GUI that loads with GIT for managing files without hte command line.
 
 * Very popular with developers
 * R packages are often available in beta from people's GitHub
-
+* Way services than just GIT
 
 
 # VisualStudio Team Services
 * This is available to Stantec users as part of our Office 365 account
 * Seems like a mashup of GIT, MS Project, MS SharePoint
+* Way services than just GIT, issue tracking, online servieces
 
 # GIT on our Servers
 * To keep in Stantec policy we can use the benefits of GIT within the confines of our own network.
@@ -120,7 +130,5 @@ There is a GUI that loads with GIT for managing files without hte command line.
 * This means setting up an R Project in a server directory and treating that like the master branch.
 
 
-
-```
 
 
