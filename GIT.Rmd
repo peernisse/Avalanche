@@ -16,7 +16,7 @@ setwd("C:/R_Projects/Avalanche")
 
 * This is the first time that the US FDA has approved a direct-to-consumer genetics test for cancer risk.
 
-* As a result, the FDA is now allowing 23andMe to market tests that assess genetic risks for breast, ovarian and prostate cancer as well as at least 10 additional diseases or conditions. 
+* The FDA has allowed 23andMe to market tests that assess genetic risks for breast, ovarian and prostate cancer as well as at least 10 additional diseases or conditions. 
 
 ![](lead_960.png)
 
@@ -27,11 +27,13 @@ setwd("C:/R_Projects/Avalanche")
 
 ### Problems With This
 
-* “The test only detects three out of more than 1,000 known BRCA mutations. This means a negative result does not rule out the possibility that an individual carries other BRCA mutations that increase cancer risk.” - US FDA
+* “The test only detects three out of more than 1,000 known BRCA mutations. This means a negative result does not rule out the possibility that an individual carries other BRCA mutations that increase cancer risk.” *- US FDA*
 
 * There is no interpretation by a physician or other professional, nor additional tests.
 
 * The concern is a false negative conclusion by citizens who will not follow up.
+
+* Also, what does it mean that a global service has been 'approved' by just the nation in which it resides?
 
 ### Sources
 * http://fortune.com/2018/03/07/23andme-fda-approval-cancer-screening/
@@ -39,15 +41,16 @@ setwd("C:/R_Projects/Avalanche")
 * https://www.theatlantic.com/health/archive/2018/03/23andme-brca-breast-cancer/554957/
 
 
-# Presentation Overview
+# GIT Presentation Overview
 
-![](git_areas.png)
+![](cat.jpg)
 
 I will go back and forth between slides and a few program interfaces.
 
 ## Disclaimer
 * I am no expert in GIT.
 * GIT could be useful for our group.
+* GIT is a pretty complex subject in its own right.
 * Who is using GIT currently?
 
 ## Objectives
@@ -58,9 +61,9 @@ I will go back and forth between slides and a few program interfaces.
 4. Visual Studio Team Services
 5. GIT on our Servers
 
-# What is Version Control
+# Version Control
 
-"Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later."
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
 http://git-scm.com/book/en/Getting-Started-About-Version-Control
 
@@ -81,7 +84,7 @@ http://en.wikipedia.org/wiki/Revision_control
 
 ![](nWYnQ.png)
 
-"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
+"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency." *- Roger Peng*
 
 http://git-scm.com/
 
@@ -133,6 +136,8 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 * git merge childbranchname
 
 ![](Capture1.JPG)
+
+https://www.atlassian.com/git/tutorials
 
 # GIT GUI
 
