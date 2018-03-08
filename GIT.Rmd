@@ -10,14 +10,50 @@ knitr::opts_chunk$set()
 setwd("C:/R_Projects/Avalanche")
 ```
 
-# Introduction
+# Safety Moment - 'Open Source' Genetic Screening
+
+* DNA analysis company 23andMe received approval Tuesday from the US Food and Drug Administration to market at-home cancer screenings as part of its test kits.
+
+* This is the first time that the US FDA has approved a direct-to-consumer genetics test for cancer risk.
+
+* As a result, the FDA is now allowing 23andMe to market tests that assess genetic risks for breast, ovarian and prostate cancer as well at least 10 additional diseases or conditions. 
+
+![](lead_960.png)
+
+# Safety Moment - 'Open Source' Genetic Screening
+
+![](lead_960.png)
+
+
+### Problems With This
+
+* “The test only detects three out of more than 1,000 known BRCA mutations. This means a negative result does not rule out the possibility that an individual carries other BRCA mutations that increase cancer risk.” - US FDA
+
+* There is no interpretation by a physician or other professional, nor additional tests.
+
+* The concern is a false negative conclusion by citizens who will not follow up.
+
+### Sources
+* http://fortune.com/2018/03/07/23andme-fda-approval-cancer-screening/
+* https://www.npr.org/sections/health-shots/2017/04/07/522897473/fda-approves-marketing-of-consumer-genetic-tests-for-some-conditions
+* https://www.theatlantic.com/health/archive/2018/03/23andme-brca-breast-cancer/554957/
+
+
+# Presentation Overview
+
+![](git_areas.png)
+
+I will go back and forth between slides and a few program interfaces.
 
 ## Disclaimer
 * I am no expert in GIT.
+* GIT could be useful for our group.
+* Who is using GIT currently?
 
 ## Objectives
+
 1. GIT  Overview
-2. GIT and RStudio
+2. GIT and RStudio                  
 3. GitHub
 4. Visual Studio Team Services
 5. GIT on our Servers
@@ -34,12 +70,16 @@ http://git-scm.com/book/en/Getting-Started-About-Version-Control
 
 http://en.wikipedia.org/wiki/Revision_control
 
+![](VersionControl-Server.png)
+
 # Version Control
 
 ![](versionCtl.gif)
 
 
 # What is GIT
+
+![](nWYnQ.png)
 
 "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
 
@@ -60,26 +100,35 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 * Open GIT Bash
 * Enter the following
 
-1. git config - - global user.name "Your Name Here" 
-2. git config - - global user.email "your_email@example.com"
-3. git config - - list
+1. git config - -global user.name "Your Name Here" 
+2. git config - -global user.email "your_email@example.com"
+3. git config - -list
+
+![](bash.JPG)
 
 # Git Bash Command Line
 
 ##Some simple commands
-* pwd     Print working directory
-* ls      List files and folders
-* cd      Change directory
-* clear   Clear out the commands in window
-* mkdir   Make a new directory
-* touch   Create new empty file
-* cp      Copy (file,directory)
-* mv      Move files (file, directory)
-* rm      Delete directories or files (careful)
+* pwd     - Print working directory
+* ls      - List files and folders
+* cd      - Change directory
+* clear   - Clear out the commands in window
+* mkdir   - Make a new directory
+* touch   - Create new empty file
+* cp      - Copy (file,directory)
+* mv      - Move files (file, directory)
+* rm      - Delete directories or files (careful)
 
 # Git Bash Command Line
 
 ##GIT commands
+
+|               |               
+| ------------- | ------------- |
+| git add   - .adds all new files    | git commit - commits changes |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 * git add     - .adds all new files
 * git commit    - commits changes
 * git push      - push changes to your remote branch
@@ -92,7 +141,7 @@ http://git-scm.com/book/en/Getting-Started-A-Short-History-of-Git
 
 # GIT GUI
 
-There is a GUI that loads with GIT for managing files without hte command line.
+There is a GUI that loads with GIT for managing files without the command line.
 
 ![](gitGUI2.JPG)
 
